@@ -1,4 +1,4 @@
-Embedded SDK is a cpp library that captures the camera stream from RTSP url and restreams it to the web browser with WebRTC. 
+Embedded SDK is a C++ library that captures the camera stream from RTSP url and restreams it to the web browser with WebRTC. 
 By using WebRTC, clients do not need to install any third party tool on their devices. Instead they can use the browsers only. Also the video latency is less than 1 seconds. 
 
 You should create a C++ project and build it by linking Embedded SDK library. 
