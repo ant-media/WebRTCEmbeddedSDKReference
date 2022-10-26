@@ -32,7 +32,7 @@ You can build it as written above or directly download the convenient executable
 ## Step 2. Run Ant Media Server
 You can find more about Ant Media Server [here](https://github.com/ant-media/Ant-Media-Server/wiki).
 
-## Step 3. Play with a web browser or mobile SDK
+## Step 3. Run the Embedded SDK
 
 `
 $ ./webrtc_pull_rtsp {ANT_MEDIA_SERVER_WS_URL} {RTSP_SOURCE_URL} {STREAM_ID}
