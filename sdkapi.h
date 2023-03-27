@@ -16,6 +16,14 @@ NONE = 5
 */
 void setLogLevel(int level);
 void setBasePath(char* basePath);
+void setDataChannelEnabled(bool enabled, void (*f)(char*));
+void sendDataChannelMessage(const char* msg);
+
+/*
+0: peer to peer
+1: publish to server
+*/
+void setMode(int mode);
 
 
 #endif // SDKAPI_H

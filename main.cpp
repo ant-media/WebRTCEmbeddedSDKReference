@@ -1,5 +1,6 @@
 #include "sdkapi.h"
 #include "stdio.h"
+// 
 
 int main(int argc, char* argv[]) {
     init();
@@ -25,8 +26,20 @@ int main(int argc, char* argv[]) {
         start(argv[1], argv[2], argv[3]);
     }
     else {
+        setDataChannelEnabled(true, [](char* msg){
+            printf("Receined Data Channel Message:%s\n", msg);
+            
+            sendDataChannelMessage(msg);
+        });        
+        
+//	  setMode(1);
+	  
+        //setLogLevel(3);
+
         start("ws://127.0.0.1:5080/WebRTCAppEE/websocket",
-                       "rtsp://127.0.0.1:6554/test.flv", "stream136");
+                       "rtsp://127.0.0.1:6554/test.flv", "stream1");
+        start("ws://127.0.0.1:5080/WebRTCAppEE/websocket",
+                       "rtsp://127.0.0.1:6554/test.flv", "stream2");
     }
 
 
