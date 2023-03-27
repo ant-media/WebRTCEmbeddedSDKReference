@@ -26,13 +26,14 @@ int main(int argc, char* argv[]) {
         start(argv[1], argv[2], argv[3]);
     }
     else {
+/*
         setDataChannelEnabled(true, [](char* msg){
             printf("Receined Data Channel Message:%s\n", msg);
             
             sendDataChannelMessage(msg);
         });        
-        
-//	  setMode(1);
+*/        
+	  setMode(1);
 	  
         //setLogLevel(3);
 
