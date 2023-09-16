@@ -39,8 +39,6 @@ int main(int argc, char* argv[]) {
 
         start("ws://127.0.0.1:5080/WebRTCAppEE/websocket",
                        "rtsp://127.0.0.1:6554/test.flv", "stream1");
-        start("ws://127.0.0.1:5080/WebRTCAppEE/websocket",
-                       "rtsp://127.0.0.1:6554/test.flv", "stream2");
     }
 
 
