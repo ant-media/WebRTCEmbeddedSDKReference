@@ -38,7 +38,7 @@ You can find more about Ant Media Server [here](https://github.com/ant-media/Ant
 $ ./webrtc_pull_rtsp {ANT_MEDIA_SERVER_WS_URL} {RTSP_SOURCE_URL} {STREAM_ID}
 `
 
-  **ANT_MEDIA_SERVER_WS_URL:** Web Socket URL for Ant Media Server. *Default: ws://127.0.0.1:5080/WebRTCAppEE/websocket*
+  **ANT_MEDIA_SERVER_WS_URL:** Web Socket URL for Ant Media Server. *Default: wss://127.0.0.1:5443/WebRTCAppEE/websocket*
 
   **RTSP_SOURCE_URL:** Camera or orher RTSP source URL. Default: *ws://127.0.0.1:5080/WebRTCAppEE/websocket*
 
@@ -47,7 +47,7 @@ $ ./webrtc_pull_rtsp {ANT_MEDIA_SERVER_WS_URL} {RTSP_SOURCE_URL} {STREAM_ID}
 **Example:**
 
   `
-  $ ./webrtc_pull_rtsp ws://my.ant.media.server.io:5080/WebRTCAppEE/websocket rtsp://172.17.0.1:6554/test.flv mystream
+  $ ./webrtc_pull_rtsp wss://my.ant.media.server.io:5443/WebRTCAppEE/websocket rtsp://172.17.0.1:6554/test.flv mystream
   `
 
 ## Step 4. Play with a web browser or mobile SDK
