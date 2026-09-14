@@ -10,18 +10,24 @@ This project is a reference to show how you can use the Embedded SDK library. Af
 ## Prerequisites
 - You should get the Embedded SDK libraries from [antmedia.io](https://antmedia.io). There are x86, arm and arm64 libraries.
 - You should have the cross compile enviroment to build the project. 
-- If you don't have, you can use this [docker container](https://github.com/multiarch/crossbuild) to build the project. So you should have docker installed.
+- If you do not have one, use a cross-build Docker image with the target compiler, FFmpeg development libraries, pkg-config, and a linker that supports the SDK object format. The old multiarch/crossbuild image may need extra packages/toolchain updates for recent SDK archives.
 
 ## Building Reference Project
+
+To build the Docker image and all Linux targets at once:
+
+  `$ docker build -t webrtc-embedded-sdk-crossbuild .`
+  `$ docker run --rm -v $(pwd):/workdir webrtc-embedded-sdk-crossbuild ./scripts/build-all-docker.sh`
+
 - For x86-linux:
 
-  `$ docker run --rm -v $(pwd):/workdir multiarch/crossbuild make`
+  `$ docker run --rm -v $(pwd):/workdir webrtc-embedded-sdk-crossbuild make`
 - For arm-linux:
   
-  `$ docker run --rm -v $(pwd):/workdir -e CROSS_TRIPLE=arm-linux-gnueabihf multiarch/crossbuild make ARCH=arm`
+  `$ docker run --rm -v $(pwd):/workdir -e CROSS_TRIPLE=arm-linux-gnueabihf webrtc-embedded-sdk-crossbuild make ARCH=arm`
 - For arm64-linux:
   
-  `$ docker run --rm -v $(pwd):/workdir -e CROSS_TRIPLE=aarch64-linux-gnu multiarch/crossbuild make ARCH=arm64`
+  `$ docker run --rm -v $(pwd):/workdir -e CROSS_TRIPLE=aarch64-linux-gnu webrtc-embedded-sdk-crossbuild make ARCH=arm64`
 
 
 # Usage of executable:
